@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Example search of Cessna 172, 1990-2000, up to $125,000 USD in the USA sorted by most recently updated
+export CONTROLLER_SEARCH_URL="http://www.controller.com/list/list.aspx?ListCurrency=USD&TopSO=7&bcatid=13&DidSearch=1&EID=1&LP=CNT&setype=1&ETID=1&Manu=CESSNA&Mdltxt=172&mdlx=Contains&PT=125000&YF=1990&YT=2005&CTRY=usa&SO=7&btnSearch=Search"
+
+export SMTP_HOST="smtp.gmail.com:587"
+export SMTP_USERNAME="your@gmail.com"
+export SMTP_PASSWORD="s3cur3!!xzy"
+
+export EMAIL_SUBJECT="Cessna 172 Controller.com Updates!"
+
+export TO_ADDRS="probably@you.com"
+export FROM_ADDR="alsoprobably@you.com"
+
+# Make sure node, casperjs and phantomjs are in this PATH
+# export PATH=/home/pi/node-v0.11.9-linux-arm-pi/bin:/home/pi/phantomjs-1.9.0-linux-armv6l/bin:$PATH
+
+`dirname $0`/run.py
